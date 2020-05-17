@@ -88,7 +88,7 @@ function displayImage(imageRef) {
 // }
 
 $(".header a").on("click", function (e) {
-  console.log(this.hash);
+  //console.log(this.hash);
   if (
     this.hash !== "" &&
     (window.location.pathname == "/" ||

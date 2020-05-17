@@ -13,8 +13,6 @@ firebase.initializeApp(firebaseConfig);
 
 var database = firebase.database();
 
-
-
 var storageReff = firebase.storage().ref("banner");
 
 storageReff
@@ -36,13 +34,12 @@ function displayImage(imageRef) {
       console.log(url);
       var x = document.createElement("IMG");
       x.setAttribute("src", url);
-      
+
       x.setAttribute("alt", "The Pulpit Rock");
       x.classList.add("d-block");
       x.classList.add("w-100");
       //document.body.appendChild(x);
       var divi = document.createElement("DIV");
-
 
       divi.appendChild(x);
       divi.classList.add("carousel-item");
@@ -79,9 +76,9 @@ function displayImage(imageRef) {
 //       x.setAttribute("src", url);
 
 //       x.setAttribute("alt", "gallery img");
-      
+
 //       //document.body.appendChild(x);
-     
+
 //       // document.body.appendChild(divi);
 //       document.getElementById("gal-img").appendChild(x);
 //     })
@@ -90,18 +87,21 @@ function displayImage(imageRef) {
 //     });
 // }
 
-
 $(".header a").on("click", function (e) {
-   console.log(this.hash);
-  if (this.hash !== "" && (window.location.pathname == "/" || window.location.pathname == "index.html")) {
+  console.log(this.hash);
+  if (
+    this.hash !== "" &&
+    (window.location.pathname == "/" ||
+      window.location.pathname == "index.html")
+  ) {
     e.preventDefault();
     const hash = this.hash;
     $("html, body").animate(
       {
-        scrollTop: $(hash).offset().top
+        scrollTop: $(hash).offset().top,
       },
       800
-    );  
+    );
   }
 });
 
@@ -110,7 +110,7 @@ $(".header a").on("click", function (e) {
 //   if (window.location.pathname == "/" || window.location.pathname == "/index.html") {
 //     // so we're on the index page. Any index processing can happen here.
 //     //   For our use, we want to get the hash (if we have one) and trim off the leading hash:
-   
+
 //     if (window.location.hash) {
 //       let mySection = window.location.hash.substring(1); // start at the SECOND char to the end
 

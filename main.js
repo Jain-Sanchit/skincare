@@ -119,3 +119,11 @@ $(".header a").on("click", function (e) {
 //     }
 //   }
 // });
+
+var map;
+function initMap() {
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: { lat: 28.612949, lng:77.229553 },
+    zoom: 8
+  });
+}
